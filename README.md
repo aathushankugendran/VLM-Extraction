@@ -65,6 +65,8 @@ with open("extracted_data.json", "w") as json_file:
     json.dump(extracted_data, json_file, indent=4)
 ```
 ## JSON Output Format
+
+### Example JSON Output
 The extracted information follows this schema:
 ```python
 {
@@ -86,7 +88,7 @@ For image extraction, we chose **PNG** over **JPEG** due to PNG’s **lossless c
 To balance resolution and processing speed, we scale images so that the **longer side is 1200 pixels** while maintaining the original aspect ratio. This ensures high OCR accuracy without excessively large file sizes, which could slow down model inference times.
 
 ## Performance Optimizations
-- **Memory-Efficient Inference with bfloat16**: Using **Brain Floating Point (bfloat16)** reduces memory usage by ~50% compared to float32, without sacrificing numerical precision, leading to a **30-40% increase in inference speed**.
+- **Memory-Efficient Inference with** `bfloat16`: Using **Brain Floating Point (bfloat16)** reduces memory usage by ~50% compared to float32, without sacrificing numerical precision, leading to a **30-40% increase in inference speed**.
 - **Auto Device Mapping**: Automatically assigns computation to the best available device (CPU/GPU), reducing latency and optimizing hardware utilization.
 - **Torch Compilation (torch.compile)**: Optimizes model execution, leading to a **15-25% speed-up** by dynamically optimizing computational graphs.
 - **Databricks-Optimized Processing**: The pipeline is tuned for a **128GB RAM, 16-core cluster**, enabling efficient parallelization and faster batch processing.
@@ -120,4 +122,5 @@ For Databricks execution, the recommended cluster setup is:
 - **Integration with enterprise-level document management systems**
 
 ## License
+
 This project is licensed under the MIT License.
