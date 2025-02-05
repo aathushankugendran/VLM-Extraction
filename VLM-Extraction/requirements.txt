@@ -1,0 +1,29 @@
+# Core AI and Machine Learning Libraries
+torch               # PyTorch - Deep Learning Framework
+transformers        # Hugging Face Transformers - Pretrained NLP & Vision Models
+
+# OpenAI API for language processing
+openai             # OpenAI API client for GPT models
+
+# PDF Processing
+pypdf              # PDF Parsing and Manipulation
+pdf2image          # Convert PDF pages to images
+
+# Image Processing
+pillow             # PIL (Python Imaging Library) fork for handling images
+torchvision        # PyTorch package for image transformations and datasets
+
+# Performance Optimization
+accelerate         # Optimizes deep learning training on multiple devices (GPU/TPU)
+
+# NLP and Tokenization
+sentencepiece      # Tokenizer for handling text in language models
+
+# Web Requests & API Calls
+requests           # HTTP library for making API calls
+
+# PostgreSQL Database Driver (If using PostgreSQL)
+psycopg2           # PostgreSQL adapter for Python (uncomment if using a database)
+
+# Utility for generating a clean requirements.txt
+pipreqs            # Auto-generates dependencies based on project imports (uncomment if needed)
