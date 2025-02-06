@@ -23,7 +23,7 @@ sentencepiece      # Tokenizer for handling text in language models
 requests           # HTTP library for making API calls
 
 # PostgreSQL Database Driver (If using PostgreSQL)
-psycopg2           # PostgreSQL adapter for Python (uncomment if using a database)
+psycopg2           # PostgreSQL adapter for Python
 
 # Utility for generating a clean requirements.txt
-pipreqs            # Auto-generates dependencies based on project imports (uncomment if needed)
+pipreqs            # Auto-generates dependencies based on project imports
