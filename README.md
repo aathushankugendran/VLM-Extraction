@@ -79,14 +79,6 @@ The extracted information follows this schema:
     "sections": {}
 }
 ```
-## Image Format Selection
-
-### Why PNG Over JPEG?
-For image extraction, we chose **PNG** over **JPEG** due to PNG’s **lossless compression**, which preserves fine details in text-heavy images, ensuring OCR accuracy. JPEG, on the other hand, uses lossy compression, which can blur text and reduce readability. Additionally, PNG supports **transparent backgrounds**, which can be useful in document processing pipelines.
-
-### Why 1200-Pixel Scaling?
-To balance resolution and processing speed, we scale images so that the **longer side is 1200 pixels** while maintaining the original aspect ratio. This ensures high OCR accuracy without excessively large file sizes, which could slow down model inference times.
-
 ## Performance Optimizations
 - **Memory-Efficient Inference with** `bfloat16`: Using **Brain Floating Point (bfloat16)** reduces memory usage by ~50% compared to float32, without sacrificing numerical precision, leading to a **30-40% increase in inference speed**.
 - **Auto Device Mapping**: Automatically assigns computation to the best available device (CPU/GPU), reducing latency and optimizing hardware utilization.
@@ -110,16 +102,6 @@ For Databricks execution, the recommended cluster setup is:
 - **Cores**: 16 CPU cores (for parallel execution)
 - **GPU Instance**: A100 (40GB VRAM) or V100 (16GB VRAM)
 - **Databricks Units (DBUs)**: Expect usage of approximately 4-6 DBUs per hour
-
-## Applications
-- **Academic Paper Analysis**: Extracting structured data from research papers.
-- **Legal Document Processing**: Automating information retrieval from contracts.
-- **Corporate Report Summarization**: Analyzing financial reports and company filings.
-
-## Future Improvements
-- **Multi-page document processing**
-- **Fine-tuning Qwen2-VL for specific document types**
-- **Integration with enterprise-level document management systems**
 
 ## License
 
